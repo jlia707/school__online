@@ -1,0 +1,28 @@
+{
+    "clients": [
+        {
+            "id": "1",
+            "surname": "Смирнов",
+            "name": "Максим",
+            "lastname": "Александрович",
+            "phone": 89115556677,
+            "email": "рррр@gmail.com",
+            "linkVK": true,
+            "contract": 11111,
+            "status": "Ученик",
+            "manager": "Смирнова Галина"
+        },
+        {
+            "id": "2",
+            "surname": "Кулигина",
+            "name": "Юлия",
+            "lastname": "Игоревна",
+            "phone": 89115556688,
+            "email": "аааа@gmail.com",
+            "linkVK": true,
+            "contract": 22222,
+            "status": "Ученик",
+            "manager": "Смирнова Галина"
+        }
+    ]
+}
