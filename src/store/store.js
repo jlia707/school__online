@@ -4,7 +4,12 @@ import http from '@/http';
 
 Vue.use(Vuex);
 
+const httpClient = (store) => {
+  Vue.set(store, '$http', http);
+};
+
 export default new Vuex.Store({
+  plugins: [httpClient],
   state: {
     clients: [],
   },
@@ -14,16 +19,9 @@ export default new Vuex.Store({
     },
   },
   actions: {
-    GET_CLIENTS_FROM_API({ commit }) {
-      return http.get('client')
-        .then((clients) => {
-          commit('SET_CLIENTS_TO_STATE', clients.data);
-          return clients;
-        })
-        .catch((error) => {
-          console.log(error);
-          return error;
-        });
+    async GET_CLIENTS_FROM_API({ commit }) {
+      const { data } = await this.$http.get('client');
+      commit('SET_CLIENTS_TO_STATE', data);
     },
   },
 });
