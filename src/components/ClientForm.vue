@@ -35,7 +35,7 @@
               placeholder="Введите ваше отчество"
             >
             </base-form-text-vue>
-<!--
+            <!--
             <base-form-text-vue
               v-model="formData.phone"
               :error="formError.phone"
@@ -140,22 +140,24 @@ export default {
         this.$store.dispatch('GET_CLIENTS_FROM_API');
       });
     },
-  },
-  closeForm() {
-    this.$emit('close');
-  },
-  updatePersonal() {
-    console.log(this.formData);
-    this.$http.patch(`clients/${this.formData.id}`, this.formData).then(() => {
-      this.$store.dispatch('GET_CLIENTS_FROM_API');
-    });
-  },
-  onSubmit() {
-    if (this.formData.id) {
-      this.updatePersonal();
-    } else {
-      this.submitPersonalData();
-    }
+    closeForm() {
+      this.$emit('close');
+    },
+    updatePersonal() {
+      console.log(this.formData);
+      this.$http
+        .patch(`clients/${this.formData.id}`, this.formData)
+        .then(() => {
+          this.$store.dispatch('GET_CLIENTS_FROM_API');
+        });
+    },
+    onSubmit() {
+      if (this.formData.id) {
+        this.updatePersonal();
+      } else {
+        this.submitPersonalData();
+      }
+    },
   },
   created() {
     if (this.client != null) {
