@@ -11,7 +11,7 @@
     <!-- <li class="client__item">{{ client.manager }}</li> -->
     <router-link
       tag="button"
-      :to="{name:'editClient', params: {client: client}}">
+      :to="{name:'editClient', params: {id: client.id}}">
         <button>Редактировть данные клиента</button>
     </router-link>
   </ul>

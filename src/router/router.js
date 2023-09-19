@@ -16,7 +16,12 @@ const routes = [
     path: '/client/:id/edit',
     props: true,
   },
-  { name: 'createClient', component: CreateClientPage, path: '/client/create' },
+  {
+    name: 'createClient',
+    component: CreateClientPage,
+    path: '/client/create',
+    props: true,
+  },
 ];
 
 const router = new VueRouter({

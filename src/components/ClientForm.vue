@@ -120,13 +120,13 @@ import BaseFormSelectVue from './BaseFormSelect.vue';
 
 export default {
   components: { BaseFormTextVue, BaseFormTextAreaVue, BaseFormSelectVue },
-  props: {
-    client: {
-      type: Object,
-      required: true,
-      // так как обязательный объект пишем required
-    },
-  },
+  // props: {
+  //   client: {
+  //     type: Object,
+  //     required: true,
+  //     // так как обязательный объект пишем required
+  //   },
+  // },
   data() {
     return {
       formData: {},

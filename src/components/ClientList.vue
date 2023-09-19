@@ -5,7 +5,7 @@
       </ClientItem>
     </ul>
     <router-link tag="button"
-      :to="{ name: 'createClient' }">
+      :to="{ name: 'createClient'}">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="23"
@@ -33,7 +33,7 @@ export default {
   name: 'ClientList',
   data() {
     return {
-
+      currentClient: null,
     };
   },
   components: {
