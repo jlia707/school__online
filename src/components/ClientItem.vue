@@ -9,9 +9,9 @@
       <li class="client__item">{{ client.id }}</li>
       <li class="client__item">{{ client.surname }}</li>
       <li class="client__item">{{ client.lastname }}</li>
-      <li class="client__item">{{ client.phone }}</li>
-      <li class="client__item">{{ client.status }}</li>
-      <li class="client__item">{{ client.manager }}</li>
+      <!-- <li class="client__item">{{ client.phone }}</li> -->
+      <!-- <li class="client__item">{{ client.status }}</li> -->
+      <!-- <li class="client__item">{{ client.manager }}</li> -->
     </ul>
     <button>Перейти в карточку клиента</button>
     </router-link>

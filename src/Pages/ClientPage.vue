@@ -3,12 +3,12 @@
     <li class="client__item">{{ client.id }}</li>
     <li class="client__item">{{ client.surname }}</li>
     <li class="client__item">{{ client.lastname }}</li>
-    <li class="client__item">{{ client.phone }}</li>
+    <!-- <li class="client__item">{{ client.phone }}</li> -->
     <li class="client__item">{{ client.email }}</li>
     <li class="client__item">{{ client.linkVK }}</li>
-    <li class="client__item">{{ client.contract }}</li>
-    <li class="client__item">{{ client.status }}</li>
-    <li class="client__item">{{ client.manager }}</li>
+    <!-- <li class="client__item">{{ client.contract }}</li> -->
+    <!-- <li class="client__item">{{ client.status }}</li> -->
+    <!-- <li class="client__item">{{ client.manager }}</li> -->
     <router-link
       tag="button"
       :to="{name:'editClient', params: {client: client}}">
@@ -17,7 +17,6 @@
   </ul>
 </template>
 <script>
-import axios from 'axios';
 
 export default {
   name: 'ClientPage',
@@ -37,8 +36,8 @@ export default {
   },
   methods: {
     loadClient() {
-      axios
-        .get(`http://localhost:3000/clients/${this.$route.params.id}`)
+      this.$http
+        .get(`client/${this.$route.params.id}`)
         .then((response) => {
           this.client = response.data;
         });
